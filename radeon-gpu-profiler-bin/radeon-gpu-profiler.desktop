@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Radeon GPU Profiler
+GenericName=Profiler
+Comment=Generates visualitazions of how your DirectX12, Vulkan and OpenCL applications interact with the GPU.
+MimeType=text/english;text/plain;
+Exec=/opt/radeon-gpu-profiler/RadeonGPUProfiler
+Icon=amd
+Type=Application
+Terminal=false
+Categories=Development;
+Keywords=Profiler;GPU;

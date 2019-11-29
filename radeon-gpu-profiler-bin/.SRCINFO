@@ -1,0 +1,19 @@
+pkgbase = radeon-gpu-profiler-bin
+	pkgdesc = Generates visualitazions of how your DirectX12, Vulkan and OpenCL applications interact with the GPU.
+	pkgver = 1.6.0.20
+	pkgrel = 1
+	url = https://github.com/GPUOpen-Tools/Radeon-GPUProfiler
+	arch = x86_64
+	groups = amd-dev
+	license = EULA
+	depends = xf86-video-amdgpu
+	depends = ncurses5-compat-libs
+	optdepends = opencl-amd
+	noextract = radeon-gpu-profiler.desktop
+	source = https://github.com/GPUOpen-Tools/Radeon-GPUProfiler/releases/download/v1.6/RadeonGPUProfiler_1.6.0.20.tgz
+	source = radeon-gpu-profiler.desktop
+	sha256sums = 62ec341f3e076edff4a98b79a9cb0508189f751c03f995429117e4279ce0ad04
+	sha256sums = 1cc24a076b299f5fcd634ab8123d3b05c7a657fde1472a918b3d992fbb2e44ba
+
+pkgname = radeon-gpu-profiler-bin
+

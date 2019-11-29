@@ -1,0 +1,30 @@
+# Maintainer: Marco Pompili <aur (at) mg.odd.red>
+
+pkgname=radeon-gpu-profiler-bin
+majorver=1.6
+pkgver=1.6.0.20
+pkgrel=1
+pkgdesc="Generates visualitazions of how your DirectX12, Vulkan and OpenCL applications interact with the GPU."
+arch=('x86_64')
+url="https://github.com/GPUOpen-Tools/Radeon-GPUProfiler"
+license=('EULA')
+groups=('amd-dev')
+depends=('xf86-video-amdgpu' 'ncurses5-compat-libs')
+optdepends=('opencl-amd')
+source=("https://github.com/GPUOpen-Tools/Radeon-GPUProfiler/releases/download/v${majorver}/RadeonGPUProfiler_${pkgver}.tgz"
+        "radeon-gpu-profiler.desktop")
+sha256sums=('62ec341f3e076edff4a98b79a9cb0508189f751c03f995429117e4279ce0ad04'
+            '1cc24a076b299f5fcd634ab8123d3b05c7a657fde1472a918b3d992fbb2e44ba')
+noextract=('radeon-gpu-profiler.desktop')
+
+package() {
+  cd "${srcdir}/RadeonGPUProfiler_${pkgver}"
+
+  mkdir -p ${pkgdir}/opt/radeon-gpu-profiler/
+  
+  cp -R * ${pkgdir}/opt/radeon-gpu-profiler/
+
+  install -Dm644 ${srcdir}/radeon-gpu-profiler.desktop ${pkgdir}/usr/share/applications/radeon-gpu-profiler.desktop
+}
+
+# vim:set ts=2 sw=2 et:
