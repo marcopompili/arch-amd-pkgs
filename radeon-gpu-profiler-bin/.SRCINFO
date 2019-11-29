@@ -12,8 +12,10 @@ pkgbase = radeon-gpu-profiler-bin
 	noextract = radeon-gpu-profiler.desktop
 	source = https://github.com/GPUOpen-Tools/Radeon-GPUProfiler/releases/download/v1.6/RadeonGPUProfiler_1.6.0.20.tgz
 	source = radeon-gpu-profiler.desktop
+	source = radeon-dev-panel.desktop
 	sha256sums = 62ec341f3e076edff4a98b79a9cb0508189f751c03f995429117e4279ce0ad04
 	sha256sums = 1cc24a076b299f5fcd634ab8123d3b05c7a657fde1472a918b3d992fbb2e44ba
+	sha256sums = 0dbfd3dad9eff899fadf38c5a525d6eb45587951a4271e958d05fd15a5e1dab9
 
 pkgname = radeon-gpu-profiler-bin
 
