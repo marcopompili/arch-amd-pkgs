@@ -1,19 +1,18 @@
 pkgbase = radeon-gpu-analyzer-bin
 	pkgdesc = A compiler and code analysis tool for Vulkan, DirectX, OpenGL and OpenCL.
-	pkgver = 2.3
+	pkgver = 2.4.2.83
 	pkgrel = 1
 	url = https://github.com/GPUOpen-Tools/RGA
 	arch = x86_64
 	groups = amd-dev
-	license = EULA
+	license = custom
 	depends = xf86-video-amdgpu
-	depends = ncurses5-compat-libs
 	optdepends = opencl-amd
 	noextract = radeon-gpu-analyzer.desktop
-	source = https://github.com/GPUOpen-Tools/RGA/releases/download/v2.3/rga-linux_2.3.tgz
+	source = https://github.com/GPUOpen-Tools/RGA/releases/download/2.4.2/rga-linux-2.4.2.tgz
 	source = radeon-gpu-analyzer.desktop
-	sha256sums = 62ec341f3e076edff4a98b79a9cb0508189f751c03f995429117e4279ce0ad04
-	sha256sums = 1cc24a076b299f5fcd634ab8123d3b05c7a657fde1472a918b3d992fbb2e44ba
+	sha256sums = 2e339f3275993d6067994f5381038901d85913a35abb32a533c4224ef89e46ea
+	sha256sums = 91ef8063c14a86e243bc29edde3fd8cde2780aa55c6cc86219f37ecec58a47e2
 
 pkgname = radeon-gpu-analyzer-bin
 
