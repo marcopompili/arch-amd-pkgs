@@ -1,0 +1,29 @@
+# Maintainer: Marco Pompili <aur@mg.odd.red>
+
+pkgname=radeon-dev-tool-suite
+mjrver=2021-03-31-696
+pkgver=200331.696
+pkgrel=1
+pkgdesc="A simple, convenient package including all the Radeon™ developer tools in one place."
+arch=('x86_64')
+url="https://gpuopen.com/tools/"
+license=('custom')
+groups=('amd-dev')
+depends=('xf86-video-amdgpu')
+optdepends=('opencl-amd')
+#install=
+source=("https://gpuopen.com/download/radeon-developer-tool-suite/RadeonDeveloperToolSuite-${mjrver}.tgz")
+noextract=('radeon-dev-panel.desktop')
+md5sums=('9063155f469a8d1f592760796671acbc')
+
+package() {
+  cd "${srcdir}/RadeonDeveloperToolSuite-${mjrver}"
+
+  mkdir -p ${pkgdir}/opt/radeon-dev-tool-suite/
+
+  cp -R * ${pkgdir}/opt/radeon-dev-tool-suite/
+
+  install -Dm644 ${srcdir}/radeon-dev-panel.desktop ${pkgdir}/usr/share/applications/radeon-dev-panel.desktop
+}
+
+# vim:set ts=2 sw=2 et:
